@@ -1,4 +1,4 @@
-R SCRIPT
+# R SCRIPT
 
 #import csv datasets
 df2017onwards <- read.csv("C:\\Users\\pangl\\Downloads\\resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv")
@@ -19,9 +19,9 @@ dfall$month <- as.Date(paste(dfall$month,"-01",sep=""))
 #extract number of years in remaining lease, rounded down, in numeric format
 dfall$remaining_lease <- as.numeric(substr(dfall$remaining_lease, 1, 2))
 
-#export cleaned df
+# export cleaned df
 write.csv(dfall,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-Present.csv", row.names = TRUE)
 
 
-TABLEAU DASHBOARD
-https://public.tableau.com/views/ResaleFlatPricesinSingapore1990-2022/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link
+# TABLEAU DASHBOARD
+# https://public.tableau.com/views/ResaleFlatPricesinSingapore1990-2022/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link
