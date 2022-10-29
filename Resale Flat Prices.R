@@ -1,4 +1,4 @@
-# R SCRIPT
+#R SCRIPT
 
 #import csv datasets
 df2017onwards <- read.csv("C:\\Users\\pangl\\Downloads\\resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv")
@@ -28,5 +28,5 @@ df$remaining_lease <- as.numeric(substr(df$remaining_lease, 1, 2))
 write.csv(df,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-2022.csv", row.names = TRUE)
 
 
-# TABLEAU DASHBOARD
-# https://public.tableau.com/views/ResaleFlatPricesinSingapore1990-2022/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link
+#TABLEAU DASHBOARD
+#https://public.tableau.com/views/ResaleFlatPricesinSingapore1990-2022/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link
