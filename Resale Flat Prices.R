@@ -15,12 +15,14 @@ dfall <- bind_rows(df1990to1999,df2000to2012,df2012to2014,df2015to2016,df2017onw
 
 #convert column to date format, filling in day as 01
 dfall$month <- as.Date(paste(dfall$month,"-01",sep=""))
+dfall <- dfall %>% 
+rename("date" = "month")
 
 #extract number of years in remaining lease, rounded down, in numeric format
 dfall$remaining_lease <- as.numeric(substr(dfall$remaining_lease, 1, 2))
 
 # export cleaned df
-write.csv(dfall,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-Present.csv", row.names = TRUE)
+write.csv(dfall,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-2022.csv", row.names = TRUE)
 
 
 # TABLEAU DASHBOARD
