@@ -9,24 +9,24 @@ select min(cocoa_percent), max(cocoa_percent) from chocolate;  --minimum cocoa p
 select company, count(rating) from chocolate
 where rating=4.0
 group by company
-order by count(rating) desc;                                   --the top 3 companies with the most number of '4.0' ratings are Soma, Bonnat, and Arete
+order by count(rating) desc;                                   --the top 3 companies with the most numbers of '4.0' ratings are Soma, Bonnat, and Arete
 select company, avg(rating) from chocolate
 group by company
-order by avg(rating) desc;                                     --the top 5 companies with the highest all-time rating are Heirloom Cacao Preservation (Zokoko), Ocelot, Matale, Patric, and Idilio (Felchlin)
+order by avg(rating) desc;                                     --the top 5 companies with the highest all-time ratings are Heirloom Cacao Preservation (Zokoko), Ocelot, Matale, Patric, and Idilio (Felchlin)
 select company_location, count(rating) from chocolate
 where rating=4.0
 group by company_location
-order by count(rating) desc;                                   --the top 3 company locations with the most number of '4.0' ratings are U.S.A., France, and Canada
+order by count(rating) desc;                                   --the top 3 company locations with the most numbers of '4.0' ratings are U.S.A., France, and Canada
 select company_location, avg(rating) from chocolate
 group by company_location
-order by avg(rating) desc;                                     --the top 5 company locations with the highest all-time rating are Chile, Argentina, Poland, Sao Tome, and U.A.E.
+order by avg(rating) desc;                                     --the top 5 company locations with the highest all-time ratings are Chile, Argentina, Poland, Sao Tome, and U.A.E.
 select company, count(rating) from chocolate
 where rating=4.0
 group by company
-order by count(rating) desc;                                   --the top 3 countries of bean origin with the most number of '4.0' ratings are Venezuela, Peru, and Madagascar
+order by count(rating) desc;                                   --the top 3 countries of bean origin with the most numbers of '4.0' ratings are Venezuela, Peru, and Madagascar
 select country_of_bean_origin, avg(rating) from chocolate
 group by country_of_bean_origin
-order by avg(rating) desc;                                     --the top 5 countries of bean origin with the highest all-time rating are Sao Tome & Principe, Solomon Islands, Congo, Thailand, and Cuba
+order by avg(rating) desc;                                     --the top 5 countries of bean origin with the highest all-time ratings are Sao Tome & Principe, Solomon Islands, Congo, Thailand, and Cuba
 
 
 --drop column
@@ -67,4 +67,4 @@ end;
 
 
 --TABLEAU DASHBOARD
---
+--https://public.tableau.com/app/profile/lu.woon/viz/ChocolateRatings2006-2020/Dashboard?publish=yes
