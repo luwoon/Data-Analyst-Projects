@@ -11,18 +11,21 @@ df1990to1999 <- read.csv("C:\\Users\\pangl\\Downloads\\resale-flat-prices-based-
 df2015to2016$remaining_lease <- as.character(df2015to2016$remaining_lease)
 
 #combine dfs
-dfall <- bind_rows(df1990to1999,df2000to2012,df2012to2014,df2015to2016,df2017onwards)
+df <- bind_rows(df1990to1999,df2000to2012,df2012to2014,df2015to2016,df2017onwards)
+
+#drop columns
+df = select(dfall, -1, -5, -6)
 
 #convert column to date format, filling in day as 01
-dfall$month <- as.Date(paste(dfall$month,"-01",sep=""))
-dfall <- dfall %>% 
+df <- df %>% 
 rename("date" = "month")
+df$date <- as.Date(paste(df$date,"-01",sep=""))
 
 #extract number of years in remaining lease, rounded down, in numeric format
-dfall$remaining_lease <- as.numeric(substr(dfall$remaining_lease, 1, 2))
+df$remaining_lease <- as.numeric(substr(df$remaining_lease, 1, 2))
 
-# export cleaned df
-write.csv(dfall,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-2022.csv", row.names = TRUE)
+#export cleaned df
+write.csv(df,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-2022.csv", row.names = TRUE)
 
 
 # TABLEAU DASHBOARD
