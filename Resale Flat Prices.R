@@ -1,12 +1,10 @@
 #Dataset from https://data.gov.sg/dataset/resale-flat-prices
 
 #QUESTIONS
-#1. How have resale flat prices changed over the last 20 years (1992-2022)?
-#2. Which are the top 5 towns with the most expensive resale flats?
-#3. Has the floor area (in square metres) for each flat type changed over the last 20 years?
-#4. Is the remaining number of lease years related to price?
-#5. Is the floor area related to price?
-#6. Is the storey range related to price?
+#1. How have resale flat prices changed from 1990 to 2022?
+#2. Which are the top 5 towns with the most expensive resale flats in the last 5 years? What is the proportion of each flat type in those towns?
+#3. Is the remaining number of lease years related to resale price?
+#4. Is the storey range related to resale price?
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
