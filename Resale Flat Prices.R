@@ -24,13 +24,13 @@ str(df2015to2016)
 str(df1990to1999)
 
 #as df2017onwards$remaining_lease is of chr type but df2015to2016$remaining_lease is of int type, convert df2017onwards$remaining_lease to int type by extracting the number of years, rounded down, in numeric format
-df2015to2016$remaining_lease <- as.character(df2015to2016$remaining_lease)
+df2017onwards$remaining_lease <- as.numeric(substr(df2017onwards$remaining_lease, 1, 2))
 
 #combine dfs
 df <- bind_rows(df1990to1999,df2000to2012,df2012to2014,df2015to2016,df2017onwards)
 
 #drop columns
-df = select(dfall, -1, -5, -6)
+df = select(df, -1, -5, -6)
 
 #as 'month' column is of chr type and only contains the year and month, convert column to date format, filling in day as 01
 df <- df %>% 
