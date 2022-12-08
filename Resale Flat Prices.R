@@ -1,12 +1,5 @@
 #Dataset from https://data.gov.sg/dataset/resale-flat-prices
 
-#QUESTIONS
-#1. How have resale flat prices changed from 1990 to 2022?
-#2. Which are the top 5 towns with the most expensive resale flats in the last 5 years? What is the proportion of each flat type in those towns?
-#3. Is the remaining number of lease years related to resale price?
-#4. Is the storey range related to resale price?
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #DATA EXPLORATION AND CLEANING
 
@@ -37,10 +30,8 @@ df <- df %>%
 rename("date" = "month")
 df$date <- as.Date(paste(df$date,"-01",sep=""))
 
-#export
 write.csv(df,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-2022.csv", row.names = TRUE)
 
-#----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #TABLEAU DASHBOARD
-#https://public.tableau.com/views/ResaleFlatPricesinSingapore1990-2022/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link
+#https://public.tableau.com/app/profile/lu.woon/viz/SingaporesMedianResaleFlatPrices1990-2022/Dashboard
