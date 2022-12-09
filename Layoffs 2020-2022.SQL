@@ -21,5 +21,5 @@ from layoffs
 group by company
 order by sum(total_laid_off) desc;
 
---TABLEAU DASHBOARD
+--Tableau Dashboard
 --https://public.tableau.com/views/Layoffs2020-2022_16705577563560/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
