@@ -1,7 +1,6 @@
 #Dataset from https://data.gov.sg/dataset/resale-flat-prices
 
-
-#DATA EXPLORATION AND CLEANING
+#Data Exploration and Cleaning
 
 #load dfs
 df2017onwards <- read.csv("C:\\Users\\pangl\\Downloads\\resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv")
@@ -32,6 +31,5 @@ df$date <- as.Date(paste(df$date,"-01",sep=""))
 
 write.csv(df,"C:\\Users\\pangl\\Downloads\\Resale-Prices-1990-to-2022.csv", row.names = TRUE)
 
-
-#TABLEAU DASHBOARD
+#Tableau Dashboard
 #https://public.tableau.com/app/profile/lu.woon/viz/SingaporesMedianResaleFlatPrices1990-2022/Dashboard
